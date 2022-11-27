@@ -16,6 +16,7 @@ export class BeerListComponent {
     stock: 5,
     image: 'assets/img/porter.jpeg',
     clearance: false,
+    quantity: 0,
   },
   {
     name: 'Red Red Wine',
@@ -24,6 +25,7 @@ export class BeerListComponent {
     stock: 3,
     image: 'assets/img/porter.jpeg',
     clearance: true,
+    quantity: 0,
   },
   {
     name: 'Yellow Submarine',
@@ -32,6 +34,7 @@ export class BeerListComponent {
     stock: 0,
     image: 'assets/img/porter.jpeg',
     clearance: false,
+    quantity: 0,
   },
   {
     name: 'Negra Juerte',
@@ -40,7 +43,10 @@ export class BeerListComponent {
     stock: 4,
     image: 'assets/img/porter.jpeg',
     clearance: false,
+    quantity: 0,
   }
   ];
+
+
 
 }

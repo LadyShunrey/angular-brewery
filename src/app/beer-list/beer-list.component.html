@@ -1,5 +1,5 @@
-<h1>Lista de cervezas</h1>
-<table class="table">
+<h3>Lista de cervezas</h3>
+<table class="table text-center">
   <thead>
     <tr>
       <th>Imagen</th>
@@ -7,15 +7,20 @@
       <th>Tipo</th>
       <th>Precio</th>
       <th>Stock</th>
+      <th>Compra</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let beer of beers" [ngClass]="{'clearance': beer.clearance}"> <!-- antes de cerrar la llave puedo poner una coma y  agregar mas clases-->
-      <td><img class="img-fluid" width="200" [src]="beer.image" [alt]="beer.name"></td>
+      <td><img class="img-thumbnail" width="200" [src]="beer.image" [alt]="beer.name"></td>
       <td>{{beer.name}}</td>
       <td>{{beer.type}}</td>
       <td>{{beer.price | currency}}</td>
-      <td><span class="badge text-bg-warning" *ngIf="beer.stock==0"> SIN STOCK </span></td>
+      <td><span class="badge badge-warning" *ngIf="beer.stock==0"> SIN STOCK </span></td>
+      <td>
+        <app-input-integer [quantity]="beer.quantity" [max]="beer.stock" *ngIf="beer.stock"></app-input-integer>
+        {{beer.quantity}}
+      </td>
     </tr>
   </tbody>
 </table>
