@@ -31,7 +31,7 @@ export class BeerListComponent {
     name: 'Yellow Submarine',
     type: 'Golden Ale',
     price: 180,
-    stock: 0,
+    stock: 4,
     image: 'assets/img/porter.jpeg',
     clearance: false,
     quantity: 0,
@@ -40,13 +40,28 @@ export class BeerListComponent {
     name: 'Negra Juerte',
     type: 'Porter',
     price: 100,
-    stock: 4,
+    stock: 0,
+    image: 'assets/img/porter.jpeg',
+    clearance: false,
+    quantity: 0,
+  },
+  {
+    name: 'La más rica de todas',
+    type: 'Weisse',
+    price: 130,
+    stock: 9,
     image: 'assets/img/porter.jpeg',
     clearance: false,
     quantity: 0,
   }
   ];
 
+  constructor(){}
 
+  ngOnInit(): void{
+  }
 
+  maxReached(m: string){
+    alert(m);
+  }
 }
