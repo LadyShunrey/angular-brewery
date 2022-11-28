@@ -63,8 +63,11 @@ export class BeerListComponent {
   ngOnInit(): void{
   }
 
-  addToCart(beer): void {
+  addToCart(beer: Beer): void {
     this.cart.addToCart(beer);
+    beer.stock -= beer.quantity;
+    beer.quantity = 0;
+
   }
 
   maxReached(m: string){
